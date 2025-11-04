@@ -3,7 +3,7 @@ import json
 from PIL import Image, ImageDraw
 
 BOARD_W, BOARD_H = 1024, 768
-BOAR_COLOR = (24, 80, 45)
+BOARD_COLOR = (24, 80, 45)
 COMP_COLOR = (30, 30, 30)
 SILK = (230, 230, 230)
 
@@ -14,7 +14,7 @@ def main():
     out_graph = Path("../outputs/component_with_pad_v1.graph.json")
     out_img.parent.mkdir(exist_ok=True, parents=True)
 
-    img = Image.new("RGB", (BOARD_W, BOARD_H), BOAR_COLOR)
+    img = Image.new("RGB", (BOARD_W, BOARD_H), BOARD_COLOR)
     draw = ImageDraw.Draw(img)
 
     # defining the component
