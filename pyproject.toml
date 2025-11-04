@@ -1,11 +1,19 @@
 [project]
-name="pcb-graph-of-parts"
-version="0.0.1"
-description="PCB vision built"
-requires-python=">=3.9"
-dependencies=["Pillow>=10.0.0"]
-
+name = "pcb-partgraph"
+version = "0.0.1"
+description = "PCB vision built"
+requires-python = ">=3.9"
+dependencies = [
+  "Pillow>=10.0.0",
+  "numpy>=1.24"
+]
 
 [build-system]
-requires=["setuptools>=61.0"]
-build-backend="setuptools.build_meta"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
